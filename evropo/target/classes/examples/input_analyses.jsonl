@@ -1,0 +1,7 @@
+{"publish_date": "2024-01-15", "source_type": "government", "analysis": {"mentions_students": true, "student_mention_sentiment": "good", "is_propaganda": true, "mentions_protest": false}}
+{"publish_date": "2024-01-15", "source_type": "independent", "analysis": {"mentions_students": true, "student_mention_sentiment": "bad", "is_propaganda": false, "mentions_protest": true}}
+{"publish_date": "2024-01-16", "source_type": "government", "analysis": {"mentions_students": false, "is_propaganda": true, "mentions_protest": true}}
+{"publish_date": "2024-01-15", "source_type": "government", "analysis": {"mentions_students": true, "student_mention_sentiment": "bad", "is_propaganda": true, "mentions_protest": true}}
+{"publish_date": "2024-01-16", "source_type": "independent", "analysis": {"mentions_students": true, "student_mention_sentiment": "good", "is_propaganda": false, "mentions_protest": false}}
+{"publish_date": "2024-01-15", "source_type": "unknown", "analysis": {"mentions_students": true, "student_mention_sentiment": "good"}}
+{"publish_date": "2024-01-15", "source_type": "independent"}
