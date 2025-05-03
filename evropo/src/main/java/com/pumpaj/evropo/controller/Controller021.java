@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/021")
 @CrossOrigin(origins = "*") // Allow CORS for development
 public class Controller021 {
 
     @Autowired
     private Service021 service;
 
-    @GetMapping("/viableLinks021")
+    @GetMapping("/viableLinks")
     public ResponseEntity<List<Model021>> getViableLinks() {
         List<Model021> viableLinks = service.getViableLinks();
         return ResponseEntity.ok(viableLinks);
