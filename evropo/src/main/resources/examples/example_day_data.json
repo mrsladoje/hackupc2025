@@ -1,0 +1,182 @@
+[
+    {
+        "date": "01/12/2024",
+        "student_mentions": {
+            "government": {"good": 0, "bad": 0},
+            "independent": {"good": 0, "bad": 0}
+        },
+        "state_driven_messaging": 0,
+        "protest_count": 0
+    },
+    {
+        "date": "02/12/2024",
+        "student_mentions": {
+            "government": {"good": 0, "bad": 3},
+            "independent": {"good": 5, "bad": 1}
+        },
+        "state_driven_messaging": 5,
+        "protest_count": 2
+    },
+    {
+        "date": "03/12/2024",
+        "student_mentions": {
+            "government": {"good": 1, "bad": 8},
+            "independent": {"good": 12, "bad": 2}
+        },
+        "state_driven_messaging": 15,
+        "protest_count": 5
+    },
+    {
+        "date": "04/12/2024",
+        "student_mentions": {
+            "government": {"good": 2, "bad": 25},
+            "independent": {"good": 30, "bad": 4}
+        },
+        "state_driven_messaging": 40,
+        "protest_count": 15
+    },
+    {
+        "date": "05/12/2024",
+        "student_mentions": {
+            "government": {"good": 1, "bad": 50},
+            "independent": {"good": 60, "bad": 5}
+        },
+        "state_driven_messaging": 80,
+        "protest_count": 30
+    },
+    {
+        "date": "06/12/2024",
+        "student_mentions": {
+            "government": {"good": 0, "bad": 1},
+            "independent": {"good": 2, "bad": 0}
+        },
+        "state_driven_messaging": 2,
+        "protest_count": 1
+    },
+    {
+        "date": "07/12/2024",
+        "student_mentions": {
+            "government": {"good": 1, "bad": 15},
+            "independent": {"good": 22, "bad": 3}
+        },
+        "state_driven_messaging": 30,
+        "protest_count": 10
+    },
+    {
+        "date": "08/12/2024",
+        "student_mentions": {
+            "government": {"good": 3, "bad": 60},
+            "independent": {"good": 75, "bad": 8}
+        },
+        "state_driven_messaging": 95,
+        "protest_count": 45
+    },
+    {
+        "date": "09/12/2024",
+        "student_mentions": {
+            "government": {"good": 0, "bad": 5},
+            "independent": {"good": 8, "bad": 1}
+        },
+        "state_driven_messaging": 10,
+        "protest_count": 3
+    },
+    {
+        "date": "10/12/2024",
+        "student_mentions": {
+            "government": {"good": 2, "bad": 35},
+            "independent": {"good": 40, "bad": 6}
+        },
+        "state_driven_messaging": 65,
+        "protest_count": 22
+    },
+    {
+        "date": "11/12/2024",
+        "student_mentions": {
+            "government": {"good": 0, "bad": 0},
+            "independent": {"good": 1, "bad": 0}
+        },
+        "state_driven_messaging": 0,
+        "protest_count": 0
+    },
+    {
+        "date": "12/12/2024",
+        "student_mentions": {
+            "government": {"good": 1, "bad": 12},
+            "independent": {"good": 18, "bad": 2}
+        },
+        "state_driven_messaging": 25,
+        "protest_count": 8
+    },
+    {
+        "date": "13/12/2024",
+        "student_mentions": {
+            "government": {"good": 0, "bad": 2},
+            "independent": {"good": 3, "bad": 1}
+        },
+        "state_driven_messaging": 3,
+        "protest_count": 1
+    },
+    {
+        "date": "14/12/2024",
+        "student_mentions": {
+            "government": {"good": 2, "bad": 18},
+            "independent": {"good": 25, "bad": 3}
+        },
+        "state_driven_messaging": 35,
+        "protest_count": 12
+    },
+    {
+        "date": "15/12/2024",
+        "student_mentions": {
+            "government": {"good": 1, "bad": 45},
+            "independent": {"good": 55, "bad": 7}
+        },
+        "state_driven_messaging": 75,
+        "protest_count": 28
+    },
+    {
+        "date": "16/12/2024",
+        "student_mentions": {
+            "government": {"good": 0, "bad": 6},
+             "independent": {"good": 10, "bad": 1}
+        },
+        "state_driven_messaging": 20,
+        "protest_count": 4
+    },
+    {
+        "date": "17/12/2024",
+        "student_mentions": {
+            "government": {"good": 3, "bad": 30},
+            "independent": {"good": 35, "bad": 5}
+        },
+        "state_driven_messaging": 50,
+        "protest_count": 18
+    },
+    {
+        "date": "18/12/2024",
+        "student_mentions": {
+            "government": {"good": 0, "bad": 1},
+            "independent": {"good": 1, "bad": 0}
+        },
+        "state_driven_messaging": 1,
+        "protest_count": 0
+    },
+    {
+        "date": "19/12/2024",
+        "student_mentions": {
+            "government": {"good": 1, "bad": 28},
+            "independent": {"good": 33, "bad": 4}
+        },
+        "state_driven_messaging": 55,
+        "protest_count": 19
+    },
+    {
+        "date": "20/12/2024",
+        "student_mentions": {
+            "government": {"good": 2, "bad": 55},
+            "independent": {"good": 65, "bad": 9}
+        },
+        "state_driven_messaging": 90,
+        "protest_count": 35
+    }
+]
