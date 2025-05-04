@@ -1,0 +1,947 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "This dashboard shows the data gathered from various pro-government and independent news sources on the topic of ongoing Serbian student-led protests.",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 17,
+  "links": [],
+  "panels": [
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 24,
+        "w": 18,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "# <p style=\"text-align: center;\"><span style=\"color: #4dbbff;\">🚶‍♂️☮️ Peaceful Protests Tracker:</span> <span style=\"color: #ffa75a;\">Headlines vs Reality</span> 📰<span style=\"font-size:0.9em;\">⚖️</span>✨</p>\n\n<p style=\"text-align: center;\">\n<span style=\"font-size:1.35em; color:#5e17eb; font-family: 'Monaco', monospace; letter-spacing: 1px; text-transform: uppercase;\">Unveiling Media Narratives on the Serbian Protests</span>\n</p>\n\n___\n**What happens when tragedy strikes, justice stalls, and the people take to the streets?**\n\nIn Serbia, following the tragic Novi Sad railway canopy collapse where 16 lives were lost, widespread student-led protests erupted, demanding **accountability and institutional integrity** – the very heart of **UN Sustainable Development Goal 16 (Peace, Justice & Strong Institutions)**.\n\nBut in a polarized media landscape, what's the real story?\n\n**Enter our project:** We built a pipeline to cut through the noise.\n\nHere's the breakdown of the powerful tech stack we've engineered:\n\n*   <span style=\"background-color: lightblue; color: navy; font-weight: bold; padding: 2px;\">Web Scraping Engine (Python & BeautifulSoup):</span> \nWe deploy **Python's BeautifulSoup** to meticulously scrape news from both pro-government *and* independent media outlets.\n\n*   <span style=\"background-color: lightblue; color: navy; font-weight: bold; padding: 2px;\">AI Insight Core (Gemini 2.5 Flash API):</span> \nThis raw data feeds into our smart AI core, powered by **Gemini 2.5 Flash**, extracting key facts, locations, participant mentions, and crucial *sentiment analysis* – how are protestors and their demands portrayed?\n\n*   <span style=\"background-color: lightblue; color: navy; font-weight: bold; padding: 2px;\">Automated Data Pipeline (Spring Cron-Based Backend):</span> \nA robust **Cron-based Spring backend** ensures this data stream is refreshed *hourly*, providing near real-time insights.\n\n*   <span style=\"background-color: lightblue; color: navy; font-weight: bold; padding: 2px;\">Scalable Cloud Storage (MongoDB Atlas):</span> \nAll structured insights are securely stored in **MongoDB Atlas**.\n\n*   <span style=\"background-color: lightblue; color: navy; font-weight: bold; padding: 2px;\">Dynamic Visualization Suite (Grafana):</span>\nFinally, **Grafana** takes center stage! We use its powerful visualization tools to paint a clear, visually striking picture – comparing narratives, tracking sentiment shifts, mapping protest activity, and revealing the contrasting realities presented to the public.\n\n![Serbian protest image](https://www.news10.com/wp-content/uploads/sites/64/2025/01/67988ec4d3ab84.86169358.jpeg?w=960&h=540&crop=1)",
+        "mode": "markdown"
+      },
+      "pluginVersion": "12.0.0-86898",
+      "title": "",
+      "type": "text"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 5,
+        "x": 18,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "![alt text](https://agenda2030lac.org/sites/default/files/styles/256x256/public/2019-08/E_SDG%20goals_icons-individual-rgb-16_0.png?itok=E7j2iDIR)",
+        "mode": "markdown"
+      },
+      "pluginVersion": "12.0.0-86898",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 15,
+        "w": 5,
+        "x": 18,
+        "y": 8
+      },
+      "id": 6,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "![alt text](https://attck.com/wp-content/uploads/11.01-ATTCK-Case-study-Mobile-Hero-United-Nations-1.jpg)",
+        "mode": "markdown"
+      },
+      "pluginVersion": "12.0.0-86898",
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-datasource",
+        "uid": "cekrx93uxzbwgc"
+      },
+      "description": "Bigger bubble -- bigger protest size. Click on the map for informative interactive points.",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "decimals": 4,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 5
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 13,
+        "x": 0,
+        "y": 24
+      },
+      "id": 1,
+      "options": {
+        "basemap": {
+          "config": {
+            "server": "streets",
+            "showLabels": true,
+            "theme": "auto"
+          },
+          "name": "Layer 0",
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "blur": 12,
+              "radius": 9,
+              "weight": {
+                "fixed": 1,
+                "max": 1,
+                "min": 0
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "A"
+            },
+            "location": {
+              "latitude": "x",
+              "longitude": "y",
+              "mode": "coords"
+            },
+            "name": "Protest size",
+            "opacity": 0.3,
+            "tooltip": true,
+            "type": "heatmap"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "coords",
+          "lat": 44.13002,
+          "lon": 20.351296,
+          "zoom": 6.3
+        }
+      },
+      "pluginVersion": "12.0.0-86898",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-datasource",
+            "uid": "cekrx93uxzbwgc"
+          },
+          "parsedQuery": "db.protests.find()",
+          "query": "db.protests.find()",
+          "queryType": "query",
+          "refId": "A"
+        }
+      ],
+      "title": "Locations of the protests in Serbia in the past selected period",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-datasource",
+        "uid": "cekrx93uxzbwgc"
+      },
+      "description": "Note: S&O means Students and Other organizers",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 17,
+        "w": 11,
+        "x": 13,
+        "y": 24
+      },
+      "id": 2,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Date"
+          }
+        ]
+      },
+      "pluginVersion": "12.0.0-86898",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-datasource",
+            "uid": "cekrx93uxzbwgc"
+          },
+          "parsedQuery": "db.protests.aggregate([{\"$project\":{\"_id\":0,\"date\":1,\"location\":1,\"organizer\":1,\"count.government\":1,\"count.independent\":1}}])",
+          "query": "db.protests.aggregate([\r\n  {\r\n    $project: {\r\n      _id: 0,\r\n      date: 1,\r\n      location: 1,\r\n      organizer: 1,\r\n      \"count.government\": 1,\r\n      \"count.independent\": 1\r\n    }\r\n  }\r\n])",
+          "queryType": "query",
+          "refId": "A"
+        }
+      ],
+      "title": "Table of past and planned protests",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "count.government": 3,
+              "count.independent": 4,
+              "date": 0,
+              "location": 1,
+              "organizer": 2
+            },
+            "renameByName": {
+              "count.government": "Govt count",
+              "count.independent": "Independent count",
+              "date": "Date",
+              "location": "Location",
+              "organizer": "Organizer"
+            }
+          }
+        },
+        {
+          "id": "formatString",
+          "options": {}
+        },
+        {
+          "id": "formatString",
+          "options": {
+            "outputFormat": "Substring",
+            "stringField": "date",
+            "substringEnd": 10
+          }
+        },
+        {
+          "id": "filterByValue",
+          "options": {
+            "filters": [
+              {
+                "config": {
+                  "id": "isNull",
+                  "options": {}
+                },
+                "fieldName": "Govt count"
+              }
+            ],
+            "match": "any",
+            "type": "exclude"
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-datasource",
+        "uid": "cekrx93uxzbwgc"
+      },
+      "description": "We can spot a big discrepancy in the data sources, leading us to conclude that one or both of the sides are biased. ",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "axisWidth": 100,
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 41
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [
+            "sum",
+            "mean"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0-86898",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-datasource",
+            "uid": "cekrx93uxzbwgc"
+          },
+          "parsedQuery": "db.days.find({}, {\"x\":0,\"y\":0})",
+          "query": "db.days.find(\r\n  {},\r\n  { x: 0, y: 0 }\r\n)",
+          "queryType": "query",
+          "refId": "A"
+        }
+      ],
+      "title": "Goverment vs Independent media protest coverage comparison",
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "dateFormat": "YYYY-MM-DD",
+                "destinationType": "time",
+                "targetField": "date"
+              }
+            ],
+            "fields": {}
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "proProtestCount": false,
+              "proStudentMessaging": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "_class": "",
+              "_id": "",
+              "date": "",
+              "proProtestCount": "Pro-protest messaging count",
+              "proStudentMessaging": "",
+              "propagandaCount": "Anti-student messaging",
+              "stateDrivenMessaging": "Pro-government messaging",
+              "stateMentions.badCount": "Negative mentions of the state",
+              "stateMentions.goodCount": "Positive mentions of the state",
+              "studentMentions.badCount": "Negative mentions of students",
+              "studentMentions.goodCount": "Positive mentions of students"
+            }
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-datasource",
+        "uid": "cekrx93uxzbwgc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "dark-red",
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 49
+      },
+      "id": 10,
+      "options": {
+        "displayLabels": [
+          "percent",
+          "value"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true,
+          "values": []
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0-86898",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-datasource",
+            "uid": "cekrx93uxzbwgc"
+          },
+          "parsedQuery": "db.days.aggregate([{\"$group\":{\"_id\":\"$studentMentions.independent\",\"total_good\":{\"$sum\":\"$studentMentions.goodCount\"},\"total_bad\":{\"$sum\":\"$studentMentions.badCount\"}}}])",
+          "query": "db.days.aggregate([\r\n \r\n  {\r\n    \"$group\": {\r\n      \"_id\": \"$studentMentions.independent\",\r\n      \"total_good\": { \"$sum\": \"$studentMentions.goodCount\" },\r\n      \"total_bad\": { \"$sum\": \"$studentMentions.badCount\" }\r\n    }\r\n  }\r\n\r\n])",
+          "queryType": "query",
+          "refId": "A"
+        }
+      ],
+      "title": "Student mentions in media",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-datasource",
+        "uid": "cekrx93uxzbwgc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 49
+      },
+      "id": 11,
+      "options": {
+        "displayLabels": [
+          "value",
+          "percent"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0-86898",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-datasource",
+            "uid": "cekrx93uxzbwgc"
+          },
+          "parsedQuery": "db.days.aggregate([{\"$group\":{\"_id\":\"$studentMentions.independent\",\"total_good\":{\"$sum\":\"$stateMentions.goodCount\"},\"total_bad\":{\"$sum\":\"$stateMentions.badCount\"}}}])",
+          "query": "db.days.aggregate([\r\n \r\n  {\r\n    \"$group\": {\r\n      \"_id\": \"$studentMentions.independent\",\r\n      \"total_good\": { \"$sum\": \"$stateMentions.goodCount\" },\r\n      \"total_bad\": { \"$sum\": \"$stateMentions.badCount\" }\r\n    }\r\n  }\r\n\r\n])",
+          "queryType": "query",
+          "refId": "A"
+        }
+      ],
+      "title": "State Mentions in media",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-datasource",
+        "uid": "cekrx93uxzbwgc"
+      },
+      "description": "We can spot a big discrepancy in the data sources, leading us to conclude that one or both of the sides are biased. ",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "axisWidth": 100,
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 57
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [
+            "sum",
+            "mean"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.0.0-86898",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-datasource",
+            "uid": "cekrx93uxzbwgc"
+          },
+          "parsedQuery": "db.protests.find({}, {\"x\":0,\"y\":0})",
+          "query": "db.protests.find(\r\n  {},\r\n  { x: 0, y: 0 }\r\n)",
+          "queryType": "query",
+          "refId": "A"
+        }
+      ],
+      "title": "Goverment vs Independent protest attendance estimations",
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "dateFormat": "YYYY-MM-DD",
+                "destinationType": "time",
+                "targetField": "date"
+              }
+            ],
+            "fields": {}
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "_id": "",
+              "count.government": "Government protest attendance estimation",
+              "count.independent": "Independent sources protest attendance estimation",
+              "date": ""
+            }
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-datasource",
+        "uid": "cekrx93uxzbwgc"
+      },
+      "description": "We can spot a big discrepancy in the data sources, leading us to conclude that one or both of the sides are biased. ",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 63
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.0.0-86898",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-datasource",
+            "uid": "cekrx93uxzbwgc"
+          },
+          "parsedQuery": "db.protests.find({}, {\"x\":0,\"y\":0})",
+          "query": "db.protests.find(\r\n  {},\r\n  { x: 0, y: 0 }\r\n)",
+          "queryType": "query",
+          "refId": "A"
+        }
+      ],
+      "title": "Average independent sources protest attendance estimations",
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "dateFormat": "YYYY-MM-DD",
+                "destinationType": "time",
+                "targetField": "date"
+              }
+            ],
+            "fields": {}
+          }
+        },
+        {
+          "id": "reduce",
+          "options": {
+            "labelsToFields": false,
+            "reducers": [
+              "mean"
+            ]
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-mongodb-datasource",
+        "uid": "cekrx93uxzbwgc"
+      },
+      "description": "We can spot a big discrepancy in the data sources, leading us to conclude that one or both of the sides are biased. ",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "dark-red",
+                "value": 10000
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 63
+      },
+      "id": 14,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.0.0-86898",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-mongodb-datasource",
+            "uid": "cekrx93uxzbwgc"
+          },
+          "parsedQuery": "db.protests.aggregate([{\"$group\":{\"_id\":null,\"averageValue\":{\"$avg\":\"$count.government\"}}}])",
+          "query": "db.protests.aggregate([\r\n  {\r\n    $group: {\r\n      _id: null,\r\n      averageValue: { $avg: \"$count.government\" }\r\n    }\r\n  }\r\n])",
+          "queryType": "query",
+          "refId": "A"
+        }
+      ],
+      "title": "Average goverment protest attendance estimations",
+      "transformations": [
+        {
+          "id": "convertFieldType",
+          "options": {
+            "conversions": [
+              {
+                "dateFormat": "YYYY-MM-DD",
+                "destinationType": "time",
+                "targetField": "date"
+              }
+            ],
+            "fields": {}
+          }
+        },
+        {
+          "id": "reduce",
+          "options": {
+            "labelsToFields": false,
+            "reducers": [
+              "mean"
+            ]
+          }
+        }
+      ],
+      "type": "stat"
+    }
+  ],
+  "preload": true,
+  "schemaVersion": 41,
+  "tags": [
+    "protest",
+    "UN SDG 16",
+    "freedom",
+    "justice",
+    "activism"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "2025-01-31T23:00:00.000Z",
+    "to": "2025-05-02T22:00:00.000Z"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Serbian Protests -- Media Sentiment Overview",
+  "uid": "76da1037-fc70-4cde-b0f4-4b7d0260f530",
+  "version": 85
+}
