@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup # Added for HTML parsing
 # or preferably, set the GOOGLE_API_KEY environment variable.
 # GOOGLE_API_KEY = 'YOUR_GEMINI_API_KEY' 
 # Using environment variable is the recommended approach:
-GOOGLE_API_KEY = "AIzaSyCk7UjfnFNUIKH9j5adD4WNNXc90qHpn5E"
+GOOGLE_API_KEY = ""
 
 if not GOOGLE_API_KEY:
     print("Error: GOOGLE_API_KEY environment variable not set.")
