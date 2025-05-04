@@ -144,9 +144,9 @@ Use the structure and detailed explanation below to perform your analysis accura
     "analysis": {{
         "mentions_protest": true | false,
         "protest_info": {{
-            "organizer": "Name or group organizing the protest, if mentioned, otherwise 'unknown'",
+            "organizer": "If it is organized by the State, govornment or SNS - the leading political party, or "students who want to learn" who are basically govornment paid people, put "gov", if organized by students or citizens, put "s&o", otherwise 'unknown'",
             "date": "Date of the protest (not the article publication date), in YYYY-MM-DD format if possible, otherwise 'unknown'",
-            "location": "City or area where the protest is occurring, if mentioned, otherwise 'unknown'",
+            "location": "City or area where the protest is occurring, if mentioned, otherwise 'unknown'. Try to put the city rather than a more specific location, for example if ETF is mentioned, put "Beograd",
             "count": {{
                 "government": Number | null,
                 "independent": Number | null
@@ -155,8 +155,8 @@ Use the structure and detailed explanation below to perform your analysis accura
     }},
     "source": "Name of the publication or source (e.g., 021.rs, Informer, N1, BBC), if identifiable from text or context, otherwise 'unknown'",
     "date_of_news_issue": "Date when this article was published, in YYYY-MM-DD format if possible, otherwise 'unknown'",
-    "state_driven_messaging": Integer between 0 and 5,
-    "pro_student_messaging": Integer between 0 and 5,
+    "state_driven_messaging": Integer between 0 and 10,
+    "pro_student_messaging": Integer between 0 and 10,
     "student_mentions": {{
         "good_count": Number | 0,
         "bad_count": Number | 0
@@ -164,7 +164,9 @@ Use the structure and detailed explanation below to perform your analysis accura
     "state_mentions": {{
         "good_count": Number | 0,
         "bad_count": Number | 0
-    }}
+    }},
+    "propaganda_count": Number,
+    "pro_protest_count": Number  
 }}
 '''
 
@@ -199,19 +201,19 @@ Use the structure and detailed explanation below to perform your analysis accura
 * Extract the name of the media outlet or publication (e.g., 021.rs, Informer, N1, BBC). Infer if possible, otherwise use "unknown".
 
 #### `date_of_news_issue`
-* Date the news article was published. Use YYYY-MM-DD format if possible. If mentioned explicitly or inferrable, extract it. Otherwise, use "unknown". (Note: The scraping part doesn't extract this automatically, rely on the text content).
+* Date the news article was published. Use YYYY-MM-DD format ALWAYS. If DD.MM.YYYY format was used, convert it to YYYY-MM-DD. If mentioned explicitly or inferrable, extract it. Otherwise, use "unknown". (Note: The scraping part doesn't extract this automatically, rely on the text content).
 
 #### `state_driven_messaging`
-* Score from 0 to 5 indicating how much the article aligns with or promotes a **government or state narrative**, particularly regarding protests or student actions:
+* Score from 0 to 10 indicating how much the article aligns with or promotes a **government or state narrative**, particularly regarding protests or student actions:
   * 0 = Neutral or objective reporting, no evident state influence.
-  * 3 = Balanced reporting but subtly favors state perspective or uses state-preferred terminology.
-  * 5 = Strongly biased in favor of government actions, dismissive or hostile toward protests/students, uses loaded language favoring the state.
+  * 5 = Balanced reporting but subtly favors state perspective or uses state-preferred terminology.
+  * 10 = Strongly biased in favor of government actions, dismissive or hostile toward protests/students, uses loaded language favoring the state.
 
 #### `pro_student_messaging`
-* Score from 0 to 5 indicating how much the article supports, sympathizes with, or positively portrays student protesters or their cause:
+* Score from 0 to 10 indicating how much the article supports, sympathizes with, or positively portrays student protesters or their cause:
   * 0 = Hostile, dismissive, or negative portrayal of students/protests.
-  * 3 = Neutral or balanced portrayal, presents student views fairly.
-  * 5 = Strong support for the student cause, sympathetic portrayal, highlights positive aspects of student actions.
+  * 5 = Neutral or balanced portrayal, presents student views fairly.
+  * 10 = Strong support for the student cause, sympathetic portrayal, highlights positive aspects of student actions.
 
 #### `student_mentions.good_count`
 * Number of times students or student groups are portrayed **positively** (e.g., brave, organized, peaceful, justified, legitimate demands). Default to 0 if none.
@@ -224,6 +226,12 @@ Use the structure and detailed explanation below to perform your analysis accura
 
 #### `state_mentions.bad_count`
 * Number of times the government, state institutions, or authorities are portrayed **negatively** (e.g., oppressive, violent, corrupt, unresponsive, heavy-handed). Default to 0 if none.
+
+#### `propaganda_count`
+* Number of times one of the following words, or any form of those words or phrases in serbian (plural-singular, cases (nominativ, akuzativ, ....)) are mentioned: "blokaderi", "blokaderski", "ustaše", "boljševici", "plenum", "plenumaši", "blokaderska", "blokadera", "plenumaša", "plenumašu", "blokaderu", "obojena", "revolucija", "obojenu", "revoluciju", "obojene", "revolucije", "obojena revolucija", "vučić", "predsednik" or similar. If the source is 021.rs this has to be 0, otherwise, if the source is informer, count the occurences.
+
+#### `pro_protest_count`
+* Number of times one of the following words, or any form of those words or phrases in serbian (plural-singular, cases (nominativ, akuzativ, ....)) are mentioned: "blokada", "protest", "zahtevi", "studenti", "plenum", "student", "javni čas", "šetnja", "tura", "biciklisti", "demonstracija", "odavanje pošte" or similar. If the source is informer.rs this has to be 0, otherwise, if the source is 021, count the occurences.
 
 ---
 

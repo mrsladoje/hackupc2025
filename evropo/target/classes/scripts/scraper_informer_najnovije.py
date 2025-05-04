@@ -55,7 +55,7 @@ def scrape_informer_rs():
     Scrape article titles and links from informer.rs/najnovije-vesti
     """
     base_url = "https://informer.rs"
-    target_url = f"{base_url}/najnovije-vesti"
+    target_url = f"{base_url}/najnovije-vesti?page=13"
 
     # Set up headers to mimic a browser request
     headers = {
