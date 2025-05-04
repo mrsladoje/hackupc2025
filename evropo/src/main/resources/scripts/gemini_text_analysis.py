@@ -146,7 +146,7 @@ Use the structure and detailed explanation below to perform your analysis accura
         "protest_info": {{
             "organizer": "If it is organized by the State, govornment or SNS - the leading political party, or "students who want to learn" who are basically govornment paid people, put "gov", if organized by students or citizens, put "s&o", otherwise 'unknown'",
             "date": "Date of the protest (not the article publication date), in YYYY-MM-DD format if possible, otherwise 'unknown'",
-            "location": "City or area where the protest is occurring, if mentioned, otherwise 'unknown'. Try to put the city rather than a more specific location, for example if ETF is mentioned, put "Beograd",
+            "location": "City or area where the protest is occurring, if mentioned, otherwise 'unknown'. Try to put the city rather than a more specific location, for example if ETF is mentioned, put "Beograd". Also, it must not be a city outside of Serbia,
             "count": {{
                 "government": Number | null,
                 "independent": Number | null

@@ -294,13 +294,13 @@ public class DataProcessingService {
     }
 
     /**
-     * Standardizes date format to YYYY-MM-DD
+     * Standardizes date format to YYYY-MM-DD HH:MM:SS
      * Handles input formats like DD.MM.YYYY or D.M.YYYY (with or without trailing dot)
      */
     private String standardizeDate(String dateString) {
         // If the date is already in YYYY-MM-DD format, return it as is
         if (dateString.matches("\\d{4}-\\d{2}-\\d{2}")) {
-            return dateString;
+            return dateString + " 00:00:00";
         }
 
         // Check if it's in DD.MM.YYYY format
@@ -320,7 +320,7 @@ public class DataProcessingService {
                 String year = parts[2];
 
                 // Return in YYYY-MM-DD format
-                return year + "-" + month + "-" + day;
+                return year + "-" + month + "-" + day + " 00:00:00";
             }
         }
 
