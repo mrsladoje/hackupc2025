@@ -4,6 +4,7 @@ import com.pumpaj.evropo.model.ModelInformer;
 import com.pumpaj.evropo.service.ServiceInformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,12 @@ public class ControllerInformer {
     public ResponseEntity<List<ModelInformer>> getViableLinks() {
         List<ModelInformer> viableLinks = service.getViableLinks();
         return ResponseEntity.ok(viableLinks);
+    }
+
+    // Scheduled task to run every 3 hours
+    @Scheduled(fixedRate = 3 * 60 * 60 * 1000) // 3 hours in milliseconds
+    public void scheduledGetViableLinks() {
+        service.getViableLinks();
     }
 
     @PostMapping("/markVisited/{id}")
