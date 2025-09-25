@@ -33,36 +33,13 @@ Our solution employs an automated pipeline designed to gather, analyze, and visu
 
  ![Workflow](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/405/832/datas/original.png)
 
-### 🔧 Technical Components
+## 😎 Preview (IT'S A YT LINK CLICK IT :)) )
 
-**1. News Gathering**
-- Python + BeautifulSoup for web scraping
-- Flexible parsers handling various website layouts
-- Automated collection from independent and pro-government sources
+[![Youtube Preview of Grafana Dashboard](https://img.youtube.com/vi/Eguzdn9z5Ac/maxresdefault.jpg)](https://www.youtube.com/watch?v=Eguzdn9z5Ac)
 
-**2. AI Analysis Engine**
-- Gemini 2.5 Flash API integration
-- Custom-crafted prompts for structured data extraction
-- Sentiment analysis and location detection
-- JSON output for seamless data processing
+## 😗 Try it out
 
-**3. Backend Control Center**
-- Spring Boot application serving as central coordinator
-- Cron jobs for automatic scraping every few hours
-- REST API endpoints for Grafana integration
-- Data processing and cleanup pipeline
-
-**4. Data Storage**
-- MongoDB Atlas for flexible JSON document storage
-- Optimized for evolving data structures from web scraping
-- Scalable cloud-based solution
-
-**5. Visualization Platform**
-- Grafana dashboards with multiple panel types:
-  - **Geomaps** for protest locations
-  - **Time Series** for trend analysis
-  - **Stats panels** for key metrics
-  - **Tables** for protest schedules
+[**View the Dashboard**](https://protests.grafana.net/public-dashboards/b2a775b17b8b47b49a215a161b0c9a91)
 
 ## 🚀 Getting Started
 
@@ -100,15 +77,6 @@ Our solution employs an automated pipeline designed to gather, analyze, and visu
 5. **Access Grafana dashboard**
    - Import dashboard configuration from `grafana/dashboards/`
    - Configure data source to point to your backend API
-
-## 🛠️ Built With
-
-- **🐍 Python** - Web scraping and data processing
-- **🤖 Gemini API** - AI-powered content analysis
-- **📊 Grafana** - Interactive data visualization
-- **🍃 Spring Boot** - Backend API and job scheduling
-- **🍃 MongoDB Atlas** - Cloud-based document storage
-- **🕷️ BeautifulSoup** - HTML parsing and web scraping
 
 ## 💪 Challenges Overcome
 
