@@ -1,7 +1,8 @@
 # 🕊️ Peaceful Protest Tracker: Headlines vs Reality
 
-> **Bringing clarity to media narratives through data-driven insights**
-
+>
+> 🏆 **2ND PRIZE WINNER** | [**HACKUPC 2025 - Grafana Challenge**](https://devpost.com/software/peaceful-protest-tracker-headlines-vs-reality) 🏅
+> 
 [![Built with](https://img.shields.io/badge/Built%20with-❤️%20%26%20Coffee-red)](https://github.com)
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
